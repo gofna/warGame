@@ -4,7 +4,7 @@
 using namespace std;
 
 class Soldier{
-    protected:
+    public:
         int _player;
         int _points;
         int _ability;
