@@ -1,7 +1,7 @@
 #ifndef _FOOTSOLDIER_H_
 #define _FOOTSOLDIER_H_
-
 #include "Soldier.hpp"
+
 
 
 
@@ -11,7 +11,7 @@ class FootSoldier: public Soldier{
         _points = 100;
         _ability = 10;
     }
-    virtual void activity() override;
+    virtual void activity(std::vector<std::vector<Soldier*>> &board, std::pair<int,int> location) override;
 
 };
 

@@ -1,6 +1,6 @@
 #ifndef _SNIPER_H_
 #define _SNIPER_H_
-
+#include <limits>
 #include "Soldier.hpp"
 
 
@@ -10,8 +10,7 @@ class Sniper : public Soldier{
         _points = 100;
         _ability = 50;
     }
-    void activity() override;
-
+    void activity(std::vector<std::vector<Soldier*>> &board, pair<int,int> location) override;
 };
 
 #endif
