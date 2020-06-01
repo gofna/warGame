@@ -11,8 +11,9 @@ class SniperCommander : public Sniper{
     SniperCommander(int player): Sniper(player){
         _points = 120;
         _ability = 100;
+        MAX_LIFE = 120;
     }
-    virtual void activity(std::vector<std::vector<Soldier*>> &board, std::pair<int,int> location) override;
+    virtual std::pair<int,int> activity(std::vector<std::vector<Soldier*>> &board, std::pair<int,int> location) override;
 
 };
 

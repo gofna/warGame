@@ -2,7 +2,7 @@
 #include "Soldier.hpp"
 
 
-void Soldier:: activity(std::vector<std::vector<Soldier*>> &board, std::pair<int,int> location){
+std::pair<int,int> Soldier:: activity(std::vector<std::vector<Soldier*>> &board, std::pair<int,int> location){
 
 }
 
