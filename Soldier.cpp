@@ -1,9 +1,8 @@
 
 #include "Soldier.hpp"
-#include <iostream>
 
 
-void Soldier:: activity(){
+void Soldier:: activity(std::vector<std::vector<Soldier*>> &board, std::pair<int,int> location){
 
 }
 

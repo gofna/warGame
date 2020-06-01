@@ -12,7 +12,7 @@ class FootCommander : public FootSoldier{
         _points = 150;
         _ability = 20;
     }
-    void activity(std::vector<std::vector<Soldier*>> &board, pair<int,int> location) override;
+    virtual void activity(std::vector<std::vector<Soldier*>> &board, std::pair<int,int> location) override;
 };
 
 #endif

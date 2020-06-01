@@ -12,7 +12,7 @@ class SniperCommander : public Sniper{
         _points = 120;
         _ability = 100;
     }
-    void activity(std::vector<std::vector<Soldier*>> &board, pair<int,int> location) override;
+    virtual void activity(std::vector<std::vector<Soldier*>> &board, std::pair<int,int> location) override;
 
 };
 

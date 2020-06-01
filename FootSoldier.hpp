@@ -1,5 +1,6 @@
 #ifndef _FOOTSOLDIER_H_
 #define _FOOTSOLDIER_H_
+
 #include "Soldier.hpp"
 
 

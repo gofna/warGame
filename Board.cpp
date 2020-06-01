@@ -7,7 +7,7 @@ Soldier*& Board::operator[](std::pair<int,int> location){
     Soldier* s = this->board[location.first][location.second];
     if(location.first > board.size() || location.first < 0 || 
         location.second > board[location.first].size() || location.second < 0){
-            throw runtime_error("outsid the board");
+            throw std::runtime_error("outsid the board");
     }
     return s;
 }
@@ -16,7 +16,7 @@ Soldier*& Board::operator[](std::pair<int,int> location){
     Soldier* s = this->board[location.first][location.second];
     if(location.first > board.size() || location.first < 0 || 
         location.second > board[location.first].size() || location.second < 0){
-            throw runtime_error("outsid the board");
+            throw std::runtime_error("outsid the board");
     }
     return s;
 }
@@ -29,7 +29,7 @@ void Board::move(uint player_number, std::pair<int,int> source, MoveDIR directio
         this->board[source.first][source.second] = nullptr;
         s->activity(this->board, p);
     }
-    else throw runtime_error("invalid move");
+    else throw std::runtime_error("invalid move");
 }
 
 bool Board::has_soldiers(uint player_number) const{ // remember to change
@@ -52,14 +52,14 @@ std::pair<int,int> Board::checkMove(std::pair<int,int> source, MoveDIR direction
             this->board[source.first+1][source.second] == nullptr){
                 return {source.first+1, source.second};
         }
-        throw runtime_error("invalid move");
+        throw std::runtime_error("invalid move");
     }
     else if(direction == Down){
         if(source.first-1 >= 0 && 
             this->board[source.first-1][source.second] == nullptr){
                 return {source.first-1, source.second};
         }
-        throw runtime_error("invalid move");
+        throw std::runtime_error("invalid move");
     }
 
     else if(direction == Right){
@@ -67,7 +67,7 @@ std::pair<int,int> Board::checkMove(std::pair<int,int> source, MoveDIR direction
             this->board[source.first][source.second+1] == nullptr){
                 return {source.first, source.second+1};
         }
-        throw runtime_error("invalid move");
+        throw std::runtime_error("invalid move");
     }
 
     else{
@@ -75,7 +75,7 @@ std::pair<int,int> Board::checkMove(std::pair<int,int> source, MoveDIR direction
             this->board[source.first][source.second-1] == nullptr){
                 return {source.first, source.second-1};
         }
-        throw runtime_error("invalid move");
+        throw std::runtime_error("invalid move");
     }
 }
 

@@ -1,8 +1,8 @@
 #include "Sniper.hpp"
 
 
-void Sniper::activity(std::vector<std::vector<Soldier*>> &board, pair<int,int> location){
-     pair<int,int> ToAttack;
+void Sniper::activity(std::vector<std::vector<Soldier*>> &board, std::pair<int,int> location){
+    std::pair<int,int> ToAttack;
     int Strongest =  std::numeric_limits<int>::infinity();
     for(int i = 0; i != board.size() ; i++){ // serch the nearest soldier to attack
         for (int j = 0 ; j < board[i].size() ; j++){

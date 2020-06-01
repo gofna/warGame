@@ -2,6 +2,6 @@
 
 
 
-void ParamedicCommander::activity(std::vector<std::vector<Soldier*>> &board, pair<int,int> location){
+void ParamedicCommander::activity(std::vector<std::vector<Soldier*>> &board, std::pair<int,int> location){
 
 }

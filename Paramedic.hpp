@@ -12,7 +12,7 @@ class Paramedic : public Soldier{
         _ability = 50;
         
     }
-    virtual void activity(std::vector<std::vector<Soldier*>> &board, pair<int,int> location) override;
+    virtual void activity(std::vector<std::vector<Soldier*>> &board, std::pair<int,int> location) override;
 };
 
 #endif

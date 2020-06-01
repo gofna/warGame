@@ -53,8 +53,4 @@ class Board {
     std::pair<int,int> checkMove(std::pair<int,int> source, MoveDIR direction);
 };
 
-
-
-
-
 }
