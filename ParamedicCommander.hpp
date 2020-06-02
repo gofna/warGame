@@ -13,8 +13,9 @@ class ParamedicCommander : public Paramedic{
         _points = 200;
         _ability = 100;
         MAX_LIFE = 200;
+        _type = "ParamedicCommander";
     }
-    virtual std::pair<int,int> activity(std::vector<std::vector<Soldier*>> &board, std::pair<int,int> location)override;
+    virtual void activity(std::vector<std::vector<Soldier*>> &board, std::pair<int,int> location)override;
 
 };
 

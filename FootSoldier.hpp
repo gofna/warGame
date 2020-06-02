@@ -12,8 +12,9 @@ class FootSoldier: public Soldier{
         _points = 100;
         _ability = 10;
         MAX_LIFE = 100;
+        _type = "FootSoldier";
     }
-    virtual std::pair<int,int> activity(std::vector<std::vector<Soldier*>> &board, std::pair<int,int> location) override;
+    virtual void activity(std::vector<std::vector<Soldier*>> &board, std::pair<int,int> location) override;
 
 };
 
