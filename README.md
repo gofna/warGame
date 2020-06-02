@@ -1,4 +1,8 @@
 <div dir="rtl" lang="he">
+	
+
+![WarGame Diagram](https://user-images.githubusercontent.com/57867811/83541913-ee9cea00-a502-11ea-8403-435f976a4d9e.png)
+
 
 # משחק מלחמה - שלב א
 
