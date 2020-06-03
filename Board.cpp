@@ -24,12 +24,15 @@ Soldier*& Board::operator[](std::pair<int,int> location){
 }
     
 void Board::move(uint player_number, std::pair<int,int> source, MoveDIR direction){
-    Soldier* s = this->board[source.first][source.second];
-    if(s != nullptr && s->_player == player_number){
-        std::pair<int,int> p = checkMove(source, direction);
-        this->board[p.first][p.second] = s;
-        this->board[source.first][source.second] = nullptr;
-        s->activity(this->board, p);
+    if (source.first < this->board.size() && source.second < this->board[0].size()){
+        Soldier* s = this->board[source.first][source.second];
+        if(s != nullptr && s->_player == player_number ){
+            std::pair<int,int> p = checkMove(source, direction);
+            this->board[p.first][p.second] = s;
+            this->board[source.first][source.second] = nullptr;
+            s->activity(this->board, p);
+        }
+        else throw std::runtime_error("invalid move");
     }
     else throw std::runtime_error("invalid move");
 }
@@ -52,7 +55,7 @@ bool Board::has_soldiers(uint player_number) const{ // remember to change
 
 std::pair<int,int> Board::checkMove(std::pair<int,int> source, MoveDIR direction){
     if(direction == Up){
-        if(source.first+1 <= this->board.size() && 
+        if(source.first+1 < this->board.size() && 
             this->board[source.first+1][source.second] == nullptr){
                 return {source.first+1, source.second};
         }
@@ -67,7 +70,7 @@ std::pair<int,int> Board::checkMove(std::pair<int,int> source, MoveDIR direction
     }
 
     else if(direction == Right){
-        if(source.second+1 <= this->board[source.first].size() && 
+        if(source.second+1 < this->board[source.first].size() && 
             this->board[source.first][source.second+1] == nullptr){
                 return {source.first, source.second+1};
         }

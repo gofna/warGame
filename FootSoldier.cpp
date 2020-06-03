@@ -17,9 +17,11 @@ void FootSoldier::activity(std::vector<std::vector<Soldier*>> &board, std::pair<
             }
         }
     }//need if not have enemy soldier
-    board[ToAttack.first][ToAttack.second]->_points -= board[location.first][location.second]->_ability;
-    if (board[ToAttack.first][ToAttack.second]->_points <= 0){ //check if the soldier is dead
-        board[ToAttack.first][ToAttack.second] = nullptr;
+    if(MinDistance != pow(board.size(),2)){
+        board[ToAttack.first][ToAttack.second]->_points -= board[location.first][location.second]->_ability;
+        if (board[ToAttack.first][ToAttack.second]->_points <= 0){ //check if the soldier is dead
+            board[ToAttack.first][ToAttack.second] = nullptr;
+        }
     }
     
 }
