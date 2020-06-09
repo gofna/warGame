@@ -15,26 +15,26 @@ using namespace std;
 
 vector<Soldier*> allSoldiers;
 
-// TEST_CASE("exceptions in the build game") {
-// 	Board board (8,1);
+ TEST_CASE("exceptions in the build game") {
+ 	Board board (8,1);
 
-// 	Soldier* s = nullptr;
-//  	std::pair<int,int> p = {0,0};
-//     CHECK(!board.has_soldiers(1));
-//     CHECK_NOTHROW(s =  (board[p] = new FootSoldier(1)));
-// 	allSoldiers.push_back(s);
-// 	CHECK(board.has_soldiers(1));
-// 	CHECK_THROWS(board[p] = new FootSoldier(1)); // there is soldier allready
-// 	std::pair<int,int> p1 = {0,2};
-// 	CHECK_THROWS(board[p1] = new FootSoldier(1)); //outside the board
-//     board[{7,0}] = new FootSoldier(2);
-// 	CHECK(board.has_soldiers(2));
-// 	std::pair<int,int> p2 = {7,0};
-// 	CHECK_THROWS(board[p2] = new FootSoldier(1)); // there is soldier allready
-// 	std::pair<int,int> p3 = {8,0};
-// 	CHECK_THROWS(board[p3] = new FootSoldier(2)); //outside the board
+ 	Soldier* s = nullptr;
+  	std::pair<int,int> p = {0,0};
+     CHECK(!board.has_soldiers(1));
+     CHECK_NOTHROW(s =  (board[p] = new FootSoldier(1)));
+ 	allSoldiers.push_back(s);
+ 	CHECK(board.has_soldiers(1));
+ 	CHECK_THROWS(board[p] = new FootSoldier(1)); // there is soldier allready
+ 	std::pair<int,int> p1 = {0,2};
+ 	CHECK_THROWS(board[p1] = new FootSoldier(1)); //outside the board
+             board[{7,0}] = new FootSoldier(2);
+ 	CHECK(board.has_soldiers(2));
+ 	std::pair<int,int> p2 = {7,0};
+ 	CHECK_THROWS(board[p2] = new FootSoldier(1)); // there is soldier allready
+ 	std::pair<int,int> p3 = {8,0};
+ 	CHECK_THROWS(board[p3] = new FootSoldier(2)); //outside the board
 
-// }
+ }
 
 TEST_CASE("Foot soldiers simple full game") {
     Board board(8,1);
